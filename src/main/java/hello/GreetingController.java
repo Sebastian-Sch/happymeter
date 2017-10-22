@@ -12,14 +12,20 @@ import java.util.Map;
 @Controller
 public class GreetingController {
 
-    Map<String,Integer> dirtyPersistence = new HashMap<>();
+    private Map<String,Integer> dirtyPersistence = new HashMap<>();
 
-    @RequestMapping("/greeting")
-    public String greeting(@RequestParam(value="name", required=false, defaultValue="xx") String name, Model model) {
+
+    @RequestMapping("/")
+    public String home() {
+        return "home";
+    }
+
+    @RequestMapping("/vote")
+    public String vote(@RequestParam String name, Model model) {
         model.addAttribute("avg", getAvg());
         model.addAttribute("name", name);
         model.addAttribute("current",dirtyPersistence.get(name));
-        return "greeting";
+        return "vote";
     }
 
     private double getAvg() {
@@ -27,28 +33,22 @@ public class GreetingController {
     }
 
     @RequestMapping("/avg")
-    public @ResponseBody Double greeting(Model model) {
+    public @ResponseBody Double greeting() {
         return getAvg();
     }
     @RequestMapping("/give")
-    public String greeting(@RequestParam String name, @RequestParam Integer value,  Model model) {
+    public @ResponseBody String greeting(@RequestParam String name, @RequestParam Integer value) {
         dirtyPersistence.put(name,value);
-        model.addAttribute("avg", getAvg());
-        model.addAttribute("name", name);
-        model.addAttribute("current",value);
-        return "greeting";
+        return "ok";
     }
 
     @RequestMapping("/reset")
-    public String reset(@RequestParam String name,  Model model) {
+    public @ResponseBody String reset(@RequestParam String name) {
         dirtyPersistence.remove(name);
-        model.addAttribute("avg", getAvg());
-        model.addAttribute("name", name);
-        model.addAttribute("current",0);
-        return "greeting";
+        return "ok";
     }
     @RequestMapping("/resetAll")
-    public String resetAll( Model model) {
+    public String resetAll() {
         dirtyPersistence  = new HashMap<>();
         return "ok";
     }
