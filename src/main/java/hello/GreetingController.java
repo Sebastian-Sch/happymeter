@@ -54,4 +54,23 @@ public class GreetingController {
         dirtyPersistence  = new HashMap<>();
         return "ok";
     }
+
+    @RequestMapping("/statistic")
+    public String statitic(Model model) {
+        return "statistic";
+    }
+
+
+    @RequestMapping("/statisticData")
+    public @ResponseBody int[] statisticData() {
+        return getValueCount();
+    }
+
+    private int[] getValueCount(){
+        int[] valueCount = new int[10];
+        for(int val : dirtyPersistence.values()){
+            valueCount[val-1]=valueCount[val-1] + 1;
+        }
+        return valueCount;
+    }
 }
