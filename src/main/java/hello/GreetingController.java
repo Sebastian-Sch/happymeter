@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -29,7 +31,7 @@ public class GreetingController {
     }
 
     private double getAvg() {
-        return dirtyPersistence.values().stream().mapToDouble(x -> x).summaryStatistics().getAverage();
+        return BigDecimal.valueOf(dirtyPersistence.values().stream().mapToDouble(x -> x).summaryStatistics().getAverage()).setScale(2, RoundingMode.HALF_UP).doubleValue();
     }
 
     @RequestMapping("/avg")

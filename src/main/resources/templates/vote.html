@@ -4,7 +4,7 @@
     <title>Getting Started: Serving Web Content</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
-        .result_element, .vote_element{
+        .result_element, .vote_element, .description_element{
             font-size: 4em;
             text-align: center;
         }
@@ -12,10 +12,19 @@
             height:100%;
             margin:0;
         }
-        .result, .vote{
+        .description{
+            height:10%
+        }
+        .description_element{
             float:left;
             width:50%;
             height:100%;
+            background-color: gray;
+        }
+        .result, .vote{
+            float:left;
+            width:50%;
+            height:90%;
         }
 
         .result{
@@ -23,8 +32,7 @@
         }
         .result_element{
             height:100%;
-        }
-        .vote{
+            margin-right:2%;
         }
         .vote_element{
             height:10%;
@@ -68,9 +76,16 @@
     crossorigin="anonymous"></script>
 </head>
 <body>
+<div class="description">
+    <div class="description_element">
+        Average
+    </div>
+    <div class="description_element">
+        Vote
+    </div>
+</div>
 <div class="result">
-    <div th:class="'result_element vote_element_' + ${#numbers.formatDecimal(avg,0,0)}">
-        <span th:text="${avg}"/>
+    <div class="result_element">
     </div>
 </div>
 <div class="vote">
@@ -87,6 +102,11 @@
 </div>
 <script th:inline="javascript">
     /*<![CDATA[*/
+    setAVG = function(data){
+        $('.result_element').last().removeClass().addClass('result_element').addClass('vote_element_' + Math.round(data)).text(Math.round(data*100)/100);
+    };
+
+    setAVG([[${avg}]]);
 
     $('.vote_element').click(function(){
         $.ajax({
@@ -106,9 +126,7 @@
     reloadAVG=function(){
         $.ajax({
             url: '/avg',
-            success: function(data){
-                $('.result_element').last().removeClass().addClass('result_element').addClass('vote_element_' + Math.round(data)).text(Math.round(data*100)/100);
-            }
+            success: setAVG
         })
     };
 
