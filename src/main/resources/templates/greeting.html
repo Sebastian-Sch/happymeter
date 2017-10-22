@@ -6,6 +6,7 @@
     <style>
         html,body{
             height:100%;
+            margin:0;
         }
         .result, .vote{
             float:left;
@@ -63,10 +64,9 @@
     crossorigin="anonymous"></script>
 </head>
 <body>
-<p th:text="'Hello, ' + ${name} + '. Avg: ' + ${avg}" />
 <div class="result">
     <div th:class="'result_element vote_element_' + ${#numbers.formatDecimal(avg,0,0)}">
-        <span th:text="${current}"/>
+        <span th:text="${name} + ', your vote:' + ${current}"/>
     </div>
     <div th:class="'result_element vote_element_' + ${#numbers.formatDecimal(avg,0,0)}">
         <span th:text="${avg}"/>

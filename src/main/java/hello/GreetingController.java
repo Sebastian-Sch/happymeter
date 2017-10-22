@@ -17,6 +17,7 @@ public class GreetingController {
     public String greeting(@RequestParam(value="name", required=false, defaultValue="xx") String name, Model model) {
         model.addAttribute("avg", getAvg());
         model.addAttribute("name", name);
+        model.addAttribute("current",dirtyPersistence.get(name));
         return "greeting";
     }
 
@@ -41,5 +42,10 @@ public class GreetingController {
         model.addAttribute("name", name);
         model.addAttribute("current",0);
         return "greeting";
+    }
+    @RequestMapping("/resetAll")
+    public String resetAll( Model model) {
+        dirtyPersistence  = new HashMap<>();
+        return "ok";
     }
 }
