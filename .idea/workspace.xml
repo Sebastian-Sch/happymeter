@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d447f9d-9f4c-46e6-b1a5-75873adcf906" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/hello/GreetingController.java" afterPath="$PROJECT_DIR$/src/main/java/hello/GreetingController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/greeting.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/greeting.html" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -32,8 +31,8 @@
       <file leaf-file-name="greeting.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/greeting.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+            <state relative-caret-position="281">
+              <caret line="109" column="159" lean-forward="false" selection-start-line="109" selection-start-column="159" selection-end-line="109" selection-end-column="159" />
               <folding />
             </state>
           </provider>
@@ -340,12 +339,12 @@
       <workItem from="1508528167841" duration="161000" />
       <workItem from="1508528339810" duration="3038000" />
       <workItem from="1508652181641" duration="905000" />
-      <workItem from="1508653097532" duration="12679000" />
+      <workItem from="1508653097532" duration="13640000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16783000" />
+    <option name="totallyTimeSpent" value="17744000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
@@ -546,8 +545,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/greeting.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+        <state relative-caret-position="281">
+          <caret line="109" column="159" lean-forward="false" selection-start-line="109" selection-start-column="159" selection-end-line="109" selection-end-column="159" />
           <folding />
         </state>
       </provider>
