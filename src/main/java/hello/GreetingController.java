@@ -38,6 +38,7 @@ public class GreetingController {
     public @ResponseBody Double greeting() {
         return getAvg();
     }
+
     @RequestMapping("/give")
     public @ResponseBody String greeting(@RequestParam String name, @RequestParam Integer value) {
         dirtyPersistence.put(name,value);
