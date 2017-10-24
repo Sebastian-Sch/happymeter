@@ -4,9 +4,13 @@
     <title>Getting Started: Serving Web Content</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
-        .result_element, .vote_element, .description_element{
+        .result_element,  .description_element{
             font-size: 4em;
             text-align: center;
+        }
+        .vote_element{
+            font-size: 4em;
+            padding-left:10%;
         }
         html,body{
             height:100%;
@@ -88,16 +92,16 @@
     </div>
 </div>
 <div class="vote">
-    <div class="vote_element vote_element_1">1</div>
-    <div class="vote_element vote_element_2">2</div>
-    <div class="vote_element vote_element_3">3</div>
-    <div class="vote_element vote_element_4">4</div>
-    <div class="vote_element vote_element_5">5</div>
-    <div class="vote_element vote_element_6">6</div>
-    <div class="vote_element vote_element_7">7</div>
-    <div class="vote_element vote_element_8">8</div>
-    <div class="vote_element vote_element_9">9</div>
-    <div class="vote_element vote_element_10">10</div>
+    <div class="vote_element vote_element_1" data-vote="1">1 - mad</div>
+    <div class="vote_element vote_element_2" data-vote="2">2 - terrible</div>
+    <div class="vote_element vote_element_3" data-vote="3">3 - bad</div>
+    <div class="vote_element vote_element_4" data-vote="4">4 - sceptical</div>
+    <div class="vote_element vote_element_5" data-vote="5">5 - acceptable</div>
+    <div class="vote_element vote_element_6" data-vote="6">6 - ok</div>
+    <div class="vote_element vote_element_7" data-vote="7">7 - good</div>
+    <div class="vote_element vote_element_8" data-vote="8">8 - very good</div>
+    <div class="vote_element vote_element_9" data-vote="9">9 - great</div>
+    <div class="vote_element vote_element_10" data-vote="10">10 - awesome</div>
 </div>
 <script th:inline="javascript">
     /*<![CDATA[*/
@@ -113,7 +117,7 @@
             method: "POST",
             data: {
                 name: [[${name}]],
-                value: $(this).text()
+                value: $(this).data('vote')
             },
             success: function(){
                 window.location.reload();
