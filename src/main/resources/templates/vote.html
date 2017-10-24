@@ -114,6 +114,7 @@
     reloadAVG=function(){
         $.ajax({
             url: '/avg',
+            cache: false,
             success: setAVG
         })
     };
