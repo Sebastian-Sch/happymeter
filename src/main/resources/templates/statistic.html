@@ -65,11 +65,14 @@
         $.ajax({
             url: '/statisticData',
             success: function(data){
+                count = 0;
                 for (i = 0; i < series.length; i++) {
                     shift = series[i].data.length > 60; // shift if the series is longer than 600
 
                     chart.series[i].addPoint(data[i],true, shift);
+                    count = count + data[i];
                 }
+                chart.setTitle({text: 'The Happy Distribution of ' + count + ' votes'});
             }
         });
 
