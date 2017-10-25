@@ -13,7 +13,7 @@
 </head>
 <body style="height: 100%; width: 100%;">
 <div id="container" style="min-width: 310px; height: 100%; width: 100%; margin: 0 auto"></div>
-
+<div class="names"></div>
 <script th:inline="javascript">
     /*<![CDATA[*/
     colors=['#ff0000','#ff7400','#d0f73e','#00a302'];
@@ -60,26 +60,28 @@
         series: series,
     });
 
-
     getData = function(){
         $.ajax({
             url: '/statisticData',
             success: function(data){
-                count = 0;
-                sum = 0;
                 for (i = 0; i < series.length; i++) {
                     shift = series[i].data.length > 60; // shift if the series is longer than 600
-
-                    chart.series[i].addPoint(data[i],true, shift);
-                    sum = sum + (i+1) * data[i];
-                    count = count + data[i];
+                    count = data.voteCounts[i+1];
+                    if(count === undefined){
+                        count = 0;
+                    }
+                    chart.series[i].addPoint(count,true,shift);
                 }
-                chart.setSubtitle({text: 'average: ' + Math.round(sum/count * 100 ) / 100 + ' number of votes: ' + count });
+                chart.setSubtitle({text: 'average: ' + data.average + ' number of votes: ' + data.names.length });
+
+                names = 'Votes from: ' + data.names.join(' ,');
+                $('.names').html(names);
             }
         });
 
     };
 
+    getData();
     setInterval("getData()",5000)
     /*]]>*/
 </script>
