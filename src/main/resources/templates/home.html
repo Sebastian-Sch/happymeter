@@ -3,19 +3,40 @@
 <head>
     <title>Happy Happy</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+        html,body{
+            height:100%;
+            width:100%;
+        }
+        body {display: table;}
 
+        .content {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .box{
+            display: inline-block;
+            padding: 1em;
+            background-color: #dedede;
+            border-radius: 1em;
+        }
+    </style>
     <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
 </head>
 <body>
-<div style="text-align:center">
-    <p th:text="'Join the happymeter:'"/>
-    <form action="/vote">
-        <input placeholder="unique name" name="name"/>
-        <input type="submit"/>
-    </form>
+<div class="content" style="text-align:center">
+    <div class="box">
+        <h1>Happymeter</h1>
+        <br/>
+        <form action="/vote">
+            <p th:text="'Join now:'"/>
+            <input placeholder="enter unique name" name="name"/>
+            <input type="submit" value="go"/>
+        </form>
+    </div>
 </div>
 </body>
 </html>
