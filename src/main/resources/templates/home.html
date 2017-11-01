@@ -22,6 +22,9 @@
             background-color: #dedede;
             border-radius: 1em;
         }
+        input{
+            padding: 4px;
+        }
     </style>
     <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -32,10 +35,9 @@
 <div class="content" style="text-align:center">
     <div class="box">
         <h1>Happymeter</h1>
-        <br/>
         <form action="/vote">
             <p th:text="'Join now:'"/>
-            <input placeholder="enter unique name" name="name"/>
+            <input placeholder="enter unique name" name="name" required="required"/>
             <input type="submit" value="go"/>
         </form>
     </div>

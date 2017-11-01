@@ -23,7 +23,7 @@ public class HappyController {
     }
 
     @RequestMapping(value = "/vote", method = RequestMethod.GET)
-    public String vote(@RequestParam String name,  Model model) {
+    public String vote(@RequestParam String name, Model model) {
         model.addAttribute("avg", getAverage(dirtyPersistence.values()));
         model.addAttribute("name", name);
         return "vote";
