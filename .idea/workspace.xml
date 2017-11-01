@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d447f9d-9f4c-46e6-b1a5-75873adcf906" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/hello/HappyController.java" afterPath="$PROJECT_DIR$/src/main/java/hello/HappyController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/vote.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/vote.html" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -15,7 +14,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HappyController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HappyController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hello/HappyController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
@@ -78,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vote.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="vote.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/vote.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+            <state relative-caret-position="198">
+              <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -465,12 +464,12 @@
       <workItem from="1508953523597" duration="5440000" />
       <workItem from="1509352121427" duration="2540000" />
       <workItem from="1509439425323" duration="4752000" />
-      <workItem from="1509544117796" duration="5155000" />
+      <workItem from="1509544117796" duration="5654000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55439000" />
+    <option name="totallyTimeSpent" value="55938000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
@@ -773,14 +772,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/vote.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hello/HappyController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -788,6 +779,14 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/vote.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
