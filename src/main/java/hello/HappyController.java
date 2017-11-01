@@ -3,6 +3,7 @@ package hello;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -21,23 +22,24 @@ public class HappyController {
         return "home";
     }
 
-    @RequestMapping("/vote")
-    public String vote(@RequestParam String name, Model model) {
+    @RequestMapping(value = "/vote", method = RequestMethod.GET)
+    public String vote(@RequestParam String name,  Model model) {
         model.addAttribute("avg", getAverage(dirtyPersistence.values()));
         model.addAttribute("name", name);
-        model.addAttribute("current",dirtyPersistence.get(name));
         return "vote";
+    }
+
+
+    @RequestMapping(value = "/vote", method = RequestMethod.POST)
+    public String vote(@RequestParam String name, @RequestParam Integer value,  Model model) {
+        dirtyPersistence.put(name,value);
+        model.addAttribute("current",value);
+        return vote(name, model);
     }
 
     @RequestMapping("/avg")
     public @ResponseBody Double avg() {
         return getAverage(dirtyPersistence.values());
-    }
-
-    @RequestMapping("/give")
-    public @ResponseBody String give(@RequestParam String name, @RequestParam Integer value) {
-        dirtyPersistence.put(name,value);
-        return "ok";
     }
 
     @RequestMapping("/resetAll")

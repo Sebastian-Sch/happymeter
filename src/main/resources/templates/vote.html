@@ -3,17 +3,22 @@
 <head>
     <title>Happy Happy</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
     <style>
         .result_element,  .description_element{
-            font-size: 4em;
+            font-size: 2em;
             text-align: center;
         }
         .vote_element{
-            font-size: 4em;
+            font-size: 2em;
             padding-left:10%;
         }
-        .active{
-            border: 5px solid black;
+        .active {
+            border: 2px solid black;
+        }
+        .active.vote_element_4{
+            position:relative;
+            top: -4px;
         }
         html,body{
             height:100%;
@@ -93,13 +98,13 @@
     <div class="result_element">
     </div>
 </div>
-<div class="vote">
-
+<form class="vote" method="POST" action="/vote">
+    <input type="hidden" name="name" th:value="${name}"/>
     <div th:class="${current}  == 1 ? 'vote_element vote_element_1 active' : 'vote_element vote_element_1'" data-vote="1">1 - mad</div>
     <div th:class="${current}  == 2 ? 'vote_element vote_element_2 active' : 'vote_element vote_element_2'" data-vote="2">2 - uncomfortable</div>
     <div th:class="${current}  == 3 ? 'vote_element vote_element_3 active' : 'vote_element vote_element_3'" data-vote="3">3 - good</div>
     <div th:class="${current}  == 4 ? 'vote_element vote_element_4 active' : 'vote_element vote_element_4'" data-vote="4">4 - awesome</div>
-</div>
+</form>
 <script th:inline="javascript">
     /*<![CDATA[*/
     setAVG = function(data){
@@ -109,19 +114,8 @@
     setAVG([[${avg}]]);
 
     $('.vote_element').click(function(){
-        $.ajax({
-            url: '/give',
-            method: "POST",
-            cache: false,
-            data: {
-                name: [[${name}]],
-                value: $(this).data('vote')
-            },
-            success: function(){
-                window.location.reload();
-            }
-
-        });
+        $('.vote').append('<input name=\'value\' value=\''+ $(this).data('vote') +'\' />');
+        $('.vote').submit();
     });
 
     reloadAVG=function(){
