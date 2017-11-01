@@ -11,6 +11,8 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.*;
 
+import static org.apache.commons.lang3.StringUtils.*;
+
 @Controller
 public class HappyController {
 
@@ -23,7 +25,10 @@ public class HappyController {
     }
 
     @RequestMapping(value = "/vote", method = RequestMethod.GET)
-    public String vote(@RequestParam String name, Model model) {
+    public String vote(@RequestParam(required = false) String name, Model model) {
+        if(isBlank(name)){
+            return "redirect:/";
+        }
         model.addAttribute("avg", getAverage(dirtyPersistence.values()));
         model.addAttribute("name", name);
         return "vote";
