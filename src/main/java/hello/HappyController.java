@@ -1,5 +1,6 @@
 package hello;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,8 +17,8 @@ import static org.apache.commons.lang3.StringUtils.*;
 @Controller
 public class HappyController {
 
-    private Map<String,Integer> dirtyPersistence = new HashMap<>();
-
+    @Autowired
+    HappyService happyRepository;
 
     @RequestMapping("/")
     public String home() {
@@ -29,7 +30,7 @@ public class HappyController {
         if(isBlank(name)){
             return "redirect:/";
         }
-        model.addAttribute("avg", getAverage(dirtyPersistence.values()));
+        model.addAttribute("avg", getAverage(happyRepository.values()));
         model.addAttribute("name", name);
         return "vote";
     }
@@ -37,19 +38,19 @@ public class HappyController {
 
     @RequestMapping(value = "/vote", method = RequestMethod.POST)
     public String vote(@RequestParam String name, @RequestParam Integer value,  Model model) {
-        dirtyPersistence.put(name,value);
+        happyRepository.put(name,value);
         model.addAttribute("current",value);
         return vote(name, model);
     }
 
     @RequestMapping("/avg")
     public @ResponseBody Double avg() {
-        return getAverage(dirtyPersistence.values());
+        return getAverage(happyRepository.values());
     }
 
     @RequestMapping("/resetAll")
     public String resetAll() {
-        dirtyPersistence  = new HashMap<>();
+        happyRepository.reset();
         return "ok";
     }
 
@@ -61,8 +62,8 @@ public class HappyController {
 
     @RequestMapping("/statisticData")
     public @ResponseBody StatisticData statisticData() {
-        Collection<Integer> votes = dirtyPersistence.values();
-        Set<String> names = dirtyPersistence.keySet();
+        Collection<Integer> votes = happyRepository.values();
+        Set<String> names = happyRepository.keySet();
 
         return getStatisticData(votes, names);
     }
