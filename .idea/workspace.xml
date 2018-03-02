@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d447f9d-9f4c-46e6-b1a5-75873adcf906" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/hello/HappyController.java" afterPath="$PROJECT_DIR$/src/main/java/hello/HappyController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/hello/StatisticData.java" afterPath="$PROJECT_DIR$/src/main/java/hello/StatisticData.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/statistics.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/statistics.html" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -17,8 +19,8 @@
       <file leaf-file-name="HappyController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hello/HappyController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="568">
-              <caret line="76" column="41" lean-forward="false" selection-start-line="76" selection-start-column="41" selection-end-line="76" selection-end-column="41" />
+            <state relative-caret-position="532">
+              <caret line="74" column="27" lean-forward="false" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -39,10 +41,10 @@
       <file leaf-file-name="statistics.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/statistics.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="75" lean-forward="false" selection-start-line="11" selection-start-column="75" selection-end-line="11" selection-end-column="75" />
+            <state relative-caret-position="491">
+              <caret line="74" column="106" lean-forward="false" selection-start-line="74" selection-start-column="106" selection-end-line="74" selection-end-column="106" />
               <folding>
-                <marker date="1519996514338" expanded="true" signature="1370:1390" ph="..." />
+                <marker date="1519996879785" expanded="true" signature="1370:1390" ph="..." />
               </folding>
             </state>
           </provider>
@@ -71,8 +73,8 @@
       <file leaf-file-name="StatisticData.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hello/StatisticData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="144">
+              <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -154,12 +156,12 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/ok.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/statistic.html" />
         <option value="$PROJECT_DIR$/src/main/java/hello/GreetingController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hello/StatisticData.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/vote.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/home.html" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/hello/HappyRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/HappyService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hello/StatisticData.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/HappyController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/statistics.html" />
       </list>
@@ -510,12 +512,12 @@
       <workItem from="1513068059362" duration="44000" />
       <workItem from="1513932373597" duration="8000" />
       <workItem from="1517513458442" duration="778000" />
-      <workItem from="1519994797590" duration="989000" />
+      <workItem from="1519994797590" duration="1305000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62094000" />
+    <option name="totallyTimeSpent" value="62410000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="27" width="1920" height="1053" extended-state="6" />
@@ -588,7 +590,7 @@
         <state relative-caret-position="1332">
           <caret line="74" column="84" lean-forward="false" selection-start-line="74" selection-start-column="84" selection-end-line="74" selection-end-column="84" />
           <folding>
-            <marker date="1519996514338" expanded="true" signature="1370:1390" ph="..." />
+            <marker date="1519996879785" expanded="true" signature="1370:1390" ph="..." />
           </folding>
         </state>
       </provider>
@@ -616,7 +618,7 @@
         <state relative-caret-position="504">
           <caret line="28" column="24" lean-forward="true" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
           <folding>
-            <marker date="1519996514338" expanded="true" signature="1370:1390" ph="..." />
+            <marker date="1519996879785" expanded="true" signature="1370:1390" ph="..." />
           </folding>
         </state>
       </provider>
@@ -770,16 +772,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hello/StatisticData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/math/BigDecimal.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="12618">
@@ -812,10 +804,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hello/StatisticData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hello/HappyController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="76" column="41" lean-forward="false" selection-start-line="76" selection-start-column="41" selection-end-line="76" selection-end-column="41" />
+        <state relative-caret-position="532">
+          <caret line="74" column="27" lean-forward="false" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -824,10 +826,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/statistics.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="75" lean-forward="false" selection-start-line="11" selection-start-column="75" selection-end-line="11" selection-end-column="75" />
+        <state relative-caret-position="491">
+          <caret line="74" column="106" lean-forward="false" selection-start-line="74" selection-start-column="106" selection-end-line="74" selection-end-column="106" />
           <folding>
-            <marker date="1519996514338" expanded="true" signature="1370:1390" ph="..." />
+            <marker date="1519996879785" expanded="true" signature="1370:1390" ph="..." />
           </folding>
         </state>
       </provider>
