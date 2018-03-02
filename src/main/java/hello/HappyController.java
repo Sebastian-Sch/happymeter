@@ -72,7 +72,9 @@ public class HappyController {
         StatisticData statistics = new StatisticData();
         statistics.voteCounts = getVoteCounts(votes);
         statistics.average = getAverage(votes);
-        statistics.names = new TreeSet<>(names);
+        //for anonymisations, names are currently not shown
+//        statistics.names = new TreeSet<>(names);
+        statistics.names = new TreeSet<>();
         return statistics;
     }
 
